@@ -39,7 +39,7 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        compareCard(magicHand);//compare user entered card to magic hand
+//        compareCard(magicHand);//compare user entered card to magic hand
         
         //check if lucky card 5 of spades is in magic hand
         luckyCard(magicHand);
