@@ -51,4 +51,4 @@ public class Card {
         this.value = value;
     }
     
-}
+}//end of Card Class

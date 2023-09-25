@@ -41,6 +41,9 @@ public class CardTrick {
         //Then report the result here
         compareCard(magicHand);//compare user entered card to magic hand
         
+        //check if lucky card 5 of spades is in magic hand
+        luckyCard(magicHand);
+        
     }//end of main method
 
     //print out magic hand
@@ -84,4 +87,21 @@ public class CardTrick {
 
     }//end of compareCard
 
-}//end of CardTrickClass
+
+    public static void luckyCard(Card[] magicHand){
+      LuckyCard lc = new LuckyCard();
+      int i = 0;
+        do{
+            if(lc.getValue() == magicHand[i].getValue() && lc.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+                System.out.println("\nYour card Lucky Card " + lc.getValue() + " of " + lc.getSuit() +  " is in the magic hand\n");
+                break;
+            }
+            i++;
+            if(i >= 6){
+                System.out.println("\nYour Lucky Card " + lc.getValue() + " of " + lc.getSuit() +  " is NOT in the magic hand\n");
+                break;
+            }
+        }while(true);
+    }
+    
+}//end of CardTrick Class
